@@ -1,3 +1,5 @@
+import sys
+sys.setrecursionlimit(1500)
 entry = input("Enter a positive integer: ")
 
 def factorial(n):
@@ -9,6 +11,8 @@ def factorial(n):
         return n * factorial(n-1)
 
 # Example usage
-print(entry + "! is:")
-print(factorial(int(entry)))
-
+if int(entry) >= 0:
+  print(entry + "! is:")
+  print(factorial(int(entry)))
+else:
+  print("Kindly enter a value greater than or equal to zero.")
